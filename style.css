@@ -1,0 +1,272 @@
+/* =====================================
+   PENGATURAN DASAR
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+
+    /* Bagian luar kertas */
+    background-color: white;
+
+    color: #333;
+
+    padding: 35px 20px;
+}
+
+
+/* =====================================
+   KERTAS CV
+===================================== */
+
+.cv {
+    width: 100%;
+    max-width: 850px;
+
+    margin: auto;
+
+    /* Pink muda lembut */
+    background-color: pink;
+
+    padding: 45px 55px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #d8a6b5;
+}
+
+
+/* FOTO */
+
+.foto {
+    width: 125px;
+    height: 125px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid #d96b91;
+
+    flex-shrink: 0;
+}
+
+
+/* NAMA */
+
+.identitas {
+    flex: 1;
+}
+
+.identitas h1 {
+    font-size: 40px;
+
+    color: #333;
+
+    margin-bottom: 5px;
+}
+
+.identitas > p {
+    font-size: 15px;
+
+    color: #666;
+
+    margin-bottom: 14px;
+}
+
+
+/* KONTAK */
+
+.kontak {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    font-size: 12px;
+
+    color: #555;
+}
+
+
+/* =====================================
+   BAGIAN CV
+===================================== */
+
+.bagian {
+    margin-top: 28px;
+}
+
+
+/* =====================================
+   JUDUL BAGIAN
+===================================== */
+
+.bagian h2 {
+
+    /* Pink tua seperti CV sebelumnya */
+    background-color: #d96b91;
+
+    color: #222;
+
+    font-size: 16px;
+
+    padding: 5px 8px;
+
+    margin-bottom: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================
+   PROFIL
+===================================== */
+
+.profil {
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    text-align: justify;
+
+    color: #444;
+}
+
+
+/* =====================================
+   PENDIDIKAN
+===================================== */
+
+.pendidikan p {
+
+    font-size: 14px;
+
+    margin-bottom: 9px;
+
+    color: #444;
+}
+
+
+/* =====================================
+   PRESTASI & PENGALAMAN
+===================================== */
+
+.pengalaman p {
+
+    font-size: 14px;
+
+    margin-bottom: 9px;
+
+    color: #444;
+}
+
+
+/* =====================================
+   KEMAMPUAN
+===================================== */
+
+.kemampuan p {
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+
+    color: #444;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+
+    margin-top: 30px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #d8a6b5;
+
+    font-size: 12px;
+
+    font-style: italic;
+
+    color: #777;
+
+    text-align: center;
+}
+
+
+/* =====================================
+   TAMPILAN HP
+===================================== */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .cv {
+        padding: 30px 20px;
+    }
+
+    .header {
+        gap: 15px;
+    }
+
+    .foto {
+        width: 90px;
+        height: 90px;
+    }
+
+    .identitas h1 {
+        font-size: 27px;
+    }
+
+    .identitas > p {
+        font-size: 11px;
+    }
+
+    .kontak {
+        flex-direction: column;
+
+        gap: 3px;
+
+        font-size: 10px;
+    }
+
+    .bagian h2 {
+        font-size: 15px;
+    }
+
+    .profil,
+    .pendidikan p,
+    .pengalaman p,
+    .kemampuan p {
+        font-size: 13px;
+    }
+}
