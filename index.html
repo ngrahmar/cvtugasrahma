@@ -1,107 +1,368 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae - Rahma Ruhima</title>
+    <title>Portofolio - Rahma Ruhima</title>
 
-    <!-- 1. Tambahkan Link CSS Bootstrap -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Menghubungkan HTML dengan CSS Kustom Kamu -->
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS Custom -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="cv container my-4">
+<!-- NAVIGATION BAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#beranda">
+            Rahma Ruhima
+        </a>
 
-        <!-- FOTO DAN NAMA -->
-        <header class="header">
-            <img src="foto.jpg" alt="Foto Rahma Ruhima" class="foto">
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="identitas">
+        <div class="collapse navbar-collapse" id="menuNavbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pendidikan">Pendidikan</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pengalaman">Pengalaman</a></li>
+                <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+                <li class="nav-item"><a class="nav-link" href="#kemampuan">Kemampuan</a></li>
+                <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- HEADER / BERANDA -->
+<header id="beranda" class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-md-4 text-center">
+                <img src="foto.jpg" alt="Foto Rahma Ruhima" class="foto">
+            </div>
+
+            <div class="col-md-8 text-center text-md-start">
+                <p class="subjudul">SELAMAT DATANG DI PORTOFOLIO SAYA</p>
+
                 <h1>Rahma Ruhima</h1>
-                <p>Mahasiswa Teknologi Rekayasa Perangkat Lunak</p>
 
-                <div class="kontak">
-                    <span>0821***!</span>
-                    <span>ruhimarahma312@gmail.com</span>
-                    <span>Tasikmalaya, Indonesia</span>
+                <h4>Mahasiswa Teknologi Rekayasa Perangkat Lunak</h4>
+
+                <p class="deskripsi">
+                    Terus belajar, berkembang, dan berusaha menjadi pribadi
+                    yang disiplin, bertanggung jawab, serta mampu memberikan
+                    kontribusi positif.
+                </p>
+
+                <a href="#profil" class="btn btn-pink">
+                    Tentang Saya
+                </a>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+<!-- CAROUSEL -->
+<section class="container my-5">
+
+    <div id="carouselCV" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselCV"
+                data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselCV"
+                data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselCV"
+                data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <div class="slide">
+                    <i class="bi bi-mortarboard-fill"></i>
+                    <h3>Terus Belajar</h3>
+                    <p>Belajar merupakan proses untuk terus berkembang.</p>
                 </div>
             </div>
-        </header>
 
-        <!-- PROFIL SINGKAT -->
-        <section class="bagian">
-            <h2>Profil Singkat</h2>
-            <p class="profil">
-                Mahasiswa Teknologi Rekayasa Perangkat Lunak yang menjalani perkuliahan sekaligus mondok dan aktif dalam khidmat kepesantrenan.
-                Memiliki semangat belajar dan mengembangkan diri, khususnya dalam komunikasi dan public speaking. 
-                Terbuka terhadap pengalaman baru serta berusaha menjadi pribadi yang disiplin, bertanggung jawab, dan mampu memberikan kontribusi positif.
-            </p>
-        </section>
-
-
-        <!-- PENDIDIKAN (Menggunakan Komponen CARD ke-1) -->
-        <section class="bagian">
-            <h2>Pendidikan</h2>
-            <div class="card shadow-sm border-0 bg-white p-3">
-                <div class="pendidikan">
-                    <p class="mb-2"><strong>Politeknik Manahijul Huda</strong></p>
-                    <p class="mb-2">SMAT Manahijul Huda</p>
-                    <p class="mb-2">SMP-T Manahijul Huda</p>
-                    <p class="mb-2">SDN Babakan Goyang</p>
-                    <p class="mb-0">RA Al-Huda</p>
+            <div class="carousel-item">
+                <div class="slide">
+                    <i class="bi bi-people-fill"></i>
+                    <h3>Kerja Sama</h3>
+                    <p>Membangun komunikasi dan kolaborasi yang baik.</p>
                 </div>
             </div>
-        </section>
 
-
-        <!-- PRESTASI DAN PENGALAMAN (Menggunakan Komponen ACCORDION ke-2) -->
-        <section class="bagian">
-            <h2>Prestasi & Pengalaman</h2>
-            <div class="accordion" id="accordionPengalaman">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Lihat Daftar Prestasi & Pengalaman
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionPengalaman">
-                        <div class="accordion-body pengalaman">
-                            <p>🌟 Lulus di Wisuda Tahfidz setiap tahunnya</p>
-                            <p>🌟 Aktif dalam bidang Pramuka dan Paskibra</p>
-                            <p>🌟 Aktif dalam Organisasi</p>
-                        </div>
-                    </div>
+            <div class="carousel-item">
+                <div class="slide">
+                    <i class="bi bi-stars"></i>
+                    <h3>Berani Berkembang</h3>
+                    <p>Berani mencoba pengalaman baru dan menghadapi tantangan.</p>
                 </div>
             </div>
-        </section>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button"
+            data-bs-target="#carouselCV" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button"
+            data-bs-target="#carouselCV" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div>
+</section>
 
 
-        <!-- KEMAMPUAN (Menggunakan Komponen BADGE ke-3) -->
-        <section class="bagian">
-            <h2>Kemampuan</h2>
-            <div class="kemampuan d-flex flex-wrap gap-2">
-                <span class="badge bg-pink text-dark p-2" style="background-color: #d96b91;">Komunikasi & Public Speaking</span>
-                <span class="badge bg-pink text-dark p-2" style="background-color: #d96b91;">Kerja Sama Tim</span>
-                <span class="badge bg-pink text-dark p-2" style="background-color: #d96b91;">Microsoft Word</span>
-                <span class="badge bg-pink text-dark p-2" style="background-color: #d96b91;">Dasar Pemrograman</span>
+<!-- PROFIL SINGKAT -->
+<section id="profil" class="container bagian">
+
+    <h2>Profil Singkat</h2>
+
+    <div class="card shadow-sm border-0 p-4">
+        <div class="row align-items-center">
+            <!-- Tambahan Foto Kecil di Profil -->
+            <div class="col-md-3 text-center mb-3 mb-md-0">
+                <img src="rpl.jpg" alt="Rahma Ruhima" class="foto-profil-kecil img-fluid rounded">
             </div>
-        </section>
+            <div class="col-md-9">
+                <p class="mb-0">
+                    Mahasiswa Teknologi Rekayasa Perangkat Lunak yang menjalani
+                    perkuliahan sekaligus mondok dan aktif dalam khidmat kepesantrenan.
+                    Memiliki semangat belajar dan mengembangkan diri, khususnya dalam
+                    komunikasi dan public speaking. Terbuka terhadap pengalaman baru
+                    serta berusaha menjadi pribadi yang disiplin, bertanggung jawab,
+                    dan mampu memberikan kontribusi positif.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</section>
 
 
-        <!-- FOOTER -->
-        <footer>
-            CV ini dibuat untuk tugas Pemrograman Web 1
-        </footer>
+<!-- RIWAYAT PENDIDIKAN -->
+<section id="pendidikan" class="container bagian">
+
+    <h2>Riwayat Pendidikan</h2>
+
+    <div class="card shadow-sm border-0 p-3 table-responsive">
+
+        <table class="table table-bordered table-hover text-center align-middle">
+
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Sekolah / Institusi</th>
+                    <th>Tahun Masuk</th>
+                    <th>Tahun Lulus</th>
+                    <th>Keterangan</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Politeknik Manahijul Huda</td>
+                    <td>2025</td>
+                    <td>2029</td>
+                    <td>Mahasiswa</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>SMAT Manahijul Huda</td>
+                    <td>2022</td>
+                    <td>2025</td>
+                    <td>Lulus</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>SMP-T Manahijul Huda</td>
+                    <td>2019</td>
+                    <td>2022</td>
+                    <td>Lulus</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>SDN Babakan Goyang</td>
+                    <td>2013</td>
+                    <td>2019</td>
+                    <td>Lulus</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>RA Al-Huda</td>
+                    <td>2011</td>
+                    <td>2013</td>
+                    <td>Lulus</td>
+                </tr>
+            </tbody>
+
+        </table>
 
     </div>
 
-    <!-- 2. Tambahkan Script JS Bootstrap di bagian bawah sebelum penutup body -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</section>
+
+
+<!-- PRESTASI DAN PENGALAMAN -->
+<section id="pengalaman" class="container bagian">
+
+    <h2>Prestasi & Pengalaman</h2>
+
+    <div class="accordion" id="accordionPengalaman">
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#pengalaman1">
+                    Prestasi Tahfidz
+                </button>
+            </h2>
+            <div id="pengalaman1"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#accordionPengalaman">
+                <div class="accordion-body">
+                    <p>🌟 Lulus di Wisuda Tahfidz setiap tahunnya.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#pengalaman2">
+                    Organisasi dan Kegiatan
+                </button>
+            </h2>
+            <div id="pengalaman2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionPengalaman">
+                <div class="accordion-body">
+                    <p>🌟 Aktif dalam bidang Pramuka dan Paskibra.</p>
+                    <p>🌟 Aktif dalam organisasi.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- GALERI FOTO TAMBAHAN -->
+<section id="galeri" class="container bagian">
+
+    <h2>Galeri Kegiatan</h2>
+
+    <div class="row g-3">
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-2 text-center">
+                <img src="done.jpg" alt="Kegiatan 1" class="img-fluid rounded galeri-img">
+                <p class="mt-2 small text-muted">Kegiatan Akademik</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-2 text-center">
+                <img src="pesantren.jpg" alt="Kegiatan 2" class="img-fluid rounded galeri-img">
+                <p class="mt-2 small text-muted">Pesantren & Organisasi</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-2 text-center">
+                <img src="paskib.jpg" alt="Kegiatan 3" class="img-fluid rounded galeri-img">
+                <p class="mt-2 small text-muted">Pengembangan Diri</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- KEMAMPUAN -->
+<section id="kemampuan" class="container bagian">
+
+    <h2>Kemampuan</h2>
+
+    <div class="card shadow-sm border-0 p-4">
+
+        <div class="d-flex flex-wrap gap-2">
+            <span class="badge skill">Komunikasi & Public Speaking</span>
+            <span class="badge skill">Kerja Sama Tim</span>
+            <span class="badge skill">Microsoft Word</span>
+            <span class="badge skill">Dasar Pemrograman</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- KONTAK DAN JQUERY -->
+<section id="kontak" class="container bagian">
+
+    <h2>Informasi Kontak</h2>
+
+    <div class="card shadow-sm border-0 p-4 text-center">
+
+        <div id="infoKontak">
+            <p><i class="bi bi-telephone-fill"></i> 0821-xxxx-xxxx</p>
+            <p><i class="bi bi-envelope-fill"></i> ruhimarahma312@gmail.com</p>
+            <p><i class="bi bi-geo-alt-fill"></i> Tasikmalaya, Indonesia</p>
+        </div>
+
+        <div class="mt-3">
+            <button id="hide" class="btn btn-outline-danger">
+                Hide Kontak
+            </button>
+            <button id="show" class="btn btn-success">
+                Show Kontak
+            </button>
+            <button id="fade" class="btn btn-secondary">
+                Fade Kontak
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="text-center">
+    <p>© 2026 Rahma Ruhima</p>
+    <p>Website ini dibuat untuk UTS Pemrograman Web 1</p>
+</footer>
+
+
+<!-- JAVASCRIPT BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JQUERY -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- JAVASCRIPT CUSTOM -->
+<script src="script.js"></script>
 
 </body>
 </html>
